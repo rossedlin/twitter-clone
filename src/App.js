@@ -4,6 +4,9 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
 import "firebase/analytics";
+import LeftSidebar from "./LeftSidebar";
+import Main from "./Main";
+import RightSidebar from "./RightSidebar";
 
 firebase.initializeApp({
   apiKey: "AIzaSyCq1MQ0DTLOK6heIgzLrJ5FnVSKBUCyUc4",
@@ -19,12 +22,20 @@ firebase.initializeApp({
 function App() {
   return (
       <div className="App">
-        <header>
-          <h1>Twitter Clone</h1>
-        </header>
+        <div className="container">
+          <div className="row">
+            <div className="col-2">
+              <LeftSidebar/>
+        ***REMOVED***
+            <div className="col-8">
+              <Main/>
+        ***REMOVED***
+            <div className="col-2">
+              <RightSidebar/>
+        ***REMOVED***
 
-        <section>
-        </section>
+      ***REMOVED***
+    ***REMOVED***
   ***REMOVED***
   ***REMOVED***
 }
