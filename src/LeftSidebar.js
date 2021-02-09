@@ -10,6 +10,11 @@ import ProfileIcon from "./assets/profile.svg";
 import MoreIcon from "./assets/more.svg";
 import TweetIcon from "./assets/tweet.svg";
 
+***REMOVED***
+ *
+ * @returns {JSX.Element}
+ * @constructor
+***REMOVED***
 function LeftSidebar() {
   return (
       <div className="LeftSidebar">
@@ -20,7 +25,7 @@ function LeftSidebar() {
     ***REMOVED***
 
         <div>
-          <a href="#" className="btn btn-nav">
+          <a href="#" className="btn btn-info">
             <img src={HomeImage} alt="Home Image"/> Home
           </a>
     ***REMOVED***

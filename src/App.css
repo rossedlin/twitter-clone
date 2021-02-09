@@ -1,12 +1,21 @@
 body {
-  //background-color: #282c34;
+    background-color: #000000;
 
-  color: inherit;
-  font: inherit;
-  white-space: inherit;
+    color: inherit;
+    font: inherit;
+    white-space: inherit;
+}
+
+.btn-nav {
+    color: #d9d9d9;
+}
+
+.btn-nav:hover {
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
 }
 
 .btn-nav > img {
-  height: 1.95rem;
+    height: 1.95rem;
 }
-
