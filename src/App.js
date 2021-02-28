@@ -1,48 +1,29 @@
-import './App.css';
-
-***REMOVED***
 ***REMOVED***
 import 'firebase/firestore';
 import 'firebase/auth';
 import 'firebase/analytics';
-import LeftSidebar from './LeftSidebar';
-import Main from './Main';
-import RightSidebar from './RightSidebar';
 
-firebase.initializeApp({
-  apiKey: 'AIzaSyCq1MQ0DTLOK6heIgzLrJ5FnVSKBUCyUc4',
-  authDomain: 'twitter-clone-c935e.firebaseapp.com',
-  databaseURL: 'https://twitter-clone-c935e-default-rtdb.europe-west1.firebasedatabase.app',
-  projectId: 'twitter-clone-c935e',
-  storageBucket: 'twitter-clone-c935e.appspot.com',
-  messagingSenderId: '254207818709',
-  appId: '1:254207818709:web:0e5c3aae7d6b5aa3915b5c',
-  measurementId: 'G-MV86CVLGXG',
-}***REMOVED***
+import Home from './components/Home';
+
+***REMOVED***useAuthState} from 'react-firebase-hooks/auth';
 
 ***REMOVED***
  *
  * @return {JSX.Element}
  * @constructor
 ***REMOVED***
-function App() {
-  return (
-    <div className="App">
-      <div className="container">
-        <div className="row">
-          <div className="col-2">
-            <LeftSidebar/>
-      ***REMOVED***
-          <div className="col-8">
-            <Main/>
-      ***REMOVED***
-          <div className="col-2">
-            <RightSidebar/>
-      ***REMOVED***
+function App({firebase}) {
 
+  const auth = firebase.auth(***REMOVED***
+  const [user] = useAuthState(auth***REMOVED***
+
+  return (
+      <div className="App">
+        <div className="container-fluid m-0">
+          {/*{user ? 'Home' : 'SignIn'}*/}
+          <Home auth={auth}/>
     ***REMOVED***
   ***REMOVED***
-***REMOVED***
   ***REMOVED***
 }
 
