@@ -1,0 +1,11 @@
+// Override default variables before the import
+$body-bg: #000;
+
+// change the theme
+$theme-colors: (
+        "primary": rgb(29, 161, 242),
+        "info": #cdcdcd
+***REMOVED***
+
+// Import Bootstrap and its default variables
+@import '../../../node_modules/bootstrap/scss/bootstrap';
