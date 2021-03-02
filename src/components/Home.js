@@ -21,7 +21,7 @@ function Home({auth}) {
     ***REMOVED***
         <div className="col-2">
           <div className="fixed-bottom text-right" style={{marginBottom: "5.5rem", marginRight: "1.5rem"}}>
-            <a href="#" className="btn btn-primary rounded-circle p-3">
+            <a href="/compose" className="btn btn-primary rounded-circle p-3">
               <img src={TweetIcon} className="" width="25" alt="Tweet"/>
             </a>
       ***REMOVED***
