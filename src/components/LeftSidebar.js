@@ -1,9 +1,10 @@
-***REMOVED***
+import React, {useRef, useState} from 'react';
 
-import HomeImage from '../assets/icon/home.svg';
-import HashImage from '../assets/icon/hash.svg';
-import NotificationImage from '../assets/icon/notification.svg';
-import MessageImage from '../assets/icon/message.svg';
+import Icon from './Icon';
+import HomeIcon from '../assets/icon/home.svg';
+import HashIcon from '../assets/icon/hash.svg';
+import NotificationIcon from '../assets/icon/notification.svg';
+import MessageIcon from '../assets/icon/message.svg';
 
 ***REMOVED***
  *
@@ -16,27 +17,19 @@ function LeftSidebar(auth) {
   return (
     <div className="row">
       <div className="col-3">
-        <a href="#">
-          <img src={HomeImage} className="btn-icon" alt="Home Image"/>
-        </a>
+        <Icon Image={HomeIcon} Name="Home"/>
   ***REMOVED***
 
       <div className="col-3">
-        <a href="#">
-          <img src={HashImage} className="btn-icon" alt="Home Image"/>
-        </a>
+        <Icon Image={HashIcon} Name="Hashtags"/>
   ***REMOVED***
 
       <div className="col-3">
-        <a href="#">
-          <img src={NotificationImage} className="btn-icon" alt="Home Image"/>
-        </a>
+        <Icon Image={NotificationIcon} Name="Notifications"/>
   ***REMOVED***
 
       <div className="col-3">
-        <a href="#">
-          <img src={MessageImage} className="btn-icon" alt="Home Image"/>
-        </a>
+        <Icon Image={MessageIcon} Name="Messages"/>
   ***REMOVED***
 ***REMOVED***
   ***REMOVED***

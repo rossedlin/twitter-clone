@@ -22,3 +22,20 @@ $theme-colors: (
 
   margin: 1.2rem !important;
 }
+
+.tooltip-danger.bs-tooltip-top > .arrow:before {
+  border-top-color: $danger;
+}
+.tooltip-danger.bs-tooltip-right > .arrow:before {
+  border-right-color: $danger;
+}
+.tooltip-danger.bs-tooltip-bottom > .arrow:before {
+  border-bottom-color: $danger;
+}
+.tooltip-danger.bs-tooltip-left > .arrow:before {
+  border-left-color: $danger;
+}
+
+.tooltip-danger > .tooltip-inner {
+  background-color: $danger;
+}
