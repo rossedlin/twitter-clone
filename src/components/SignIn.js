@@ -2,12 +2,12 @@ import TwitterIcon from '../assets/icon/twitter.svg';
 
 ***REMOVED***
  *
- * @param auth
  * @param firebase
+ * @param auth
  * @return {JSX.Element}
  * @constructor
 ***REMOVED***
-function SignIn({auth, firebase}) {
+function SignIn({firebase, auth}) {
   const signInWithGoogle = () => {
     const provider = new firebase.auth.GoogleAuthProvider(***REMOVED***
     auth.signInWithPopup(provider***REMOVED***

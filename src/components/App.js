@@ -1,12 +1,12 @@
 ***REMOVED***
+
 import 'firebase/firestore';
 import 'firebase/auth';
 import 'firebase/analytics';
+***REMOVED***useAuthState} from 'react-firebase-hooks/auth';
 
 import Home from './Home';
 import SignIn from './SignIn';
-
-***REMOVED***useAuthState} from 'react-firebase-hooks/auth';
 
 ***REMOVED***
  *
@@ -20,7 +20,7 @@ function App({firebase}) {
 
   return (
       <div className="App">
-          {user ? <Home auth={auth}/> : <SignIn/>}
+          {user ? <Home firebase={firebase} auth={auth}/> : <SignIn firebase={firebase} auth={auth}/>}
   ***REMOVED***
   ***REMOVED***
 }
