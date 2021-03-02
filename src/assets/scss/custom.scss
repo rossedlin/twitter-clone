@@ -3,9 +3,22 @@ $body-bg: #000;
 
 // change the theme
 $theme-colors: (
-        "primary": rgb(29, 161, 242),
-        "info": #cdcdcd
+        "primary": #1da1f2,
+        "info": #cdcdcd,
+        "dark": #454545,
+        "black": #000000,
 ***REMOVED***
 
 // Import Bootstrap and its default variables
 @import '../../../node_modules/bootstrap/scss/bootstrap';
+
+.btn-icon {
+  //@extend .img;
+  //@extend .img-fluid;
+  //@extend .btn;
+  //@extend .btn-info;
+  //@extend .rounded;
+  //@extend .rounded-circle;
+
+  margin: 1.2rem !important;
+}

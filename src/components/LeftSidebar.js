@@ -14,31 +14,29 @@ import MessageImage from '../assets/icon/message.svg';
 ***REMOVED***
 function LeftSidebar(auth) {
   return (
-    <div className="col-12 p-0 fixed-bottom border-light border-top text-center bg-dark">
-      <div className="row">
-        <div className="col-3">
-          <a href="#" className="btn btn-nav">
-            <img src={HomeImage} alt="Home Image"/>
-          </a>
-    ***REMOVED***
+    <div className="row">
+      <div className="col-3">
+        <a href="#">
+          <img src={HomeImage} className="btn-icon" alt="Home Image"/>
+        </a>
+  ***REMOVED***
 
-        <div className="col-3">
-          <a href="#" className="btn btn-nav">
-            <img src={HashImage} alt="Home Image"/>
-          </a>
-    ***REMOVED***
+      <div className="col-3">
+        <a href="#">
+          <img src={HashImage} className="btn-icon" alt="Home Image"/>
+        </a>
+  ***REMOVED***
 
-        <div className="col-3">
-          <a href="#" className="btn btn-nav">
-            <img src={NotificationImage} alt="Home Image"/>
-          </a>
-    ***REMOVED***
+      <div className="col-3">
+        <a href="#">
+          <img src={NotificationImage} className="btn-icon" alt="Home Image"/>
+        </a>
+  ***REMOVED***
 
-        <div className="col-3">
-          <a href="#" className="btn btn-nav">
-            <img src={MessageImage} alt="Home Image"/>
-          </a>
-    ***REMOVED***
+      <div className="col-3">
+        <a href="#">
+          <img src={MessageImage} className="btn-icon" alt="Home Image"/>
+        </a>
   ***REMOVED***
 ***REMOVED***
   ***REMOVED***

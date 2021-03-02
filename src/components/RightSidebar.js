@@ -1,6 +1,5 @@
 ***REMOVED***
 
-import HomeIcon from '../assets/icon/home.svg';
 import StarIcon from '../assets/icon/star.svg';
 
 ***REMOVED***
@@ -8,25 +7,27 @@ import StarIcon from '../assets/icon/star.svg';
  * @return {JSX.Element}
  * @constructor
 ***REMOVED***
-function RightSidebar() {
+function RightSidebar({auth}) {
+
+  const {uid, photoURL} = auth.currentUser;
+
   return (
-    <div className="col-12 fixed-top text-white border-light border-bottom bg-dark">
-      <div className="row">
-        <div className="col-2">
-          <a href="#" className="btn btn-nav">
-            <img src={HomeIcon} alt="Home Image"/>
-          </a>
-    ***REMOVED***
+    <div className="row py-2">
+      <div className="col-2">
+        <a href="#">
+          <img src={photoURL} className="img img-fluid rounded-circle"
+               alt="Home Image"/>
+        </a>
+  ***REMOVED***
 
-        <div className="col-8">
-          Home
-    ***REMOVED***
+      <div className="col-8">
+        <h1 style={{fontSize: 18, fontWeight: 'bold'}}>Home</h1>
+  ***REMOVED***
 
-        <div className="col-2">
-          <a href="#" className="btn btn-nav">
-            <img src={StarIcon} alt="Home Image"/>
-          </a>
-    ***REMOVED***
+      <div className="col-2">
+        <a href="#">
+          <img src={StarIcon} alt="Home Image"/>
+        </a>
   ***REMOVED***
 ***REMOVED***
   ***REMOVED***

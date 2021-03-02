@@ -10,11 +10,19 @@ import Tweets from './Tweets';
 ***REMOVED***
 function Home({auth}) {
   return (
+    <div className="container">
       <div className="row">
-        <LeftSidebar auth={auth}/>
-        <Tweets/>
-        <RightSidebar/>
+        <div className="col-12 fixed-bottom border-light border-top text-center bg-black">
+          <LeftSidebar auth={auth}/>
+    ***REMOVED***
+        <div className="col-12 my-5">
+          <Tweets/>
+    ***REMOVED***
+        <div className="col-12 fixed-top text-white border-light border-bottom bg-black">
+          <RightSidebar auth={auth}/>
+    ***REMOVED***
   ***REMOVED***
+***REMOVED***
   ***REMOVED***
 }
 
