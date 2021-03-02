@@ -1,6 +1,8 @@
 ***REMOVED***
 
 import StarIcon from '../assets/icon/star.svg';
+import HomeIcon from '../assets/icon/home.svg';
+import Icon from './Icon';
 
 ***REMOVED***
  *
@@ -19,15 +21,11 @@ function RightSidebar({auth}) {
                alt="Home Image"/>
         </a>
   ***REMOVED***
-
       <div className="col-8">
         <h1 style={{fontSize: 18, fontWeight: 'bold'}}>Home</h1>
   ***REMOVED***
-
       <div className="col-2">
-        <a href="#">
-          <img src={StarIcon} alt="Home Image"/>
-        </a>
+        <Icon Image={StarIcon} Name="Top Tweets" Placement="left" Classes=""/>
   ***REMOVED***
 ***REMOVED***
   ***REMOVED***
