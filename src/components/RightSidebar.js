@@ -1,7 +1,7 @@
 ***REMOVED***
 
-import HomeIcon from '../assets/home.svg';
-import StarIcon from '../assets/star.svg';
+import HomeIcon from '../assets/icon/home.svg';
+import StarIcon from '../assets/icon/star.svg';
 
 ***REMOVED***
  *
@@ -10,7 +10,7 @@ import StarIcon from '../assets/star.svg';
 ***REMOVED***
 function RightSidebar() {
   return (
-    <div className="col-12 fixed-top text-white border-light border-bottom text-center bg-dark">
+    <div className="col-12 fixed-top text-white border-light border-bottom bg-dark">
       <div className="row">
         <div className="col-2">
           <a href="#" className="btn btn-nav">
