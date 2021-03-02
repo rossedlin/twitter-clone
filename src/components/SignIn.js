@@ -1,4 +1,5 @@
 import TwitterIcon from '../assets/icon/twitter.svg';
+***REMOVED***useAuthState} from 'react-firebase-hooks/auth';
 
 ***REMOVED***
  *
@@ -7,7 +8,11 @@ import TwitterIcon from '../assets/icon/twitter.svg';
  * @return {JSX.Element}
  * @constructor
 ***REMOVED***
-function SignIn({firebase, auth}) {
+function SignIn({firebase}) {
+
+  const auth = firebase.auth(***REMOVED***
+  const [user] = useAuthState(auth***REMOVED***
+
   const signInWithGoogle = () => {
     const provider = new firebase.auth.GoogleAuthProvider(***REMOVED***
     auth.signInWithPopup(provider***REMOVED***

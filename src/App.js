@@ -5,8 +5,8 @@ import 'firebase/auth';
 import 'firebase/analytics';
 ***REMOVED***useAuthState} from 'react-firebase-hooks/auth';
 
-import Home from './Home';
-import SignIn from './SignIn';
+import Home from './components/Home';
+import SignIn from './components/SignIn';
 
 ***REMOVED***
  *
