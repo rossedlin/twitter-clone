@@ -2,6 +2,7 @@
 import LeftSidebar from './LeftSidebar';
 import RightSidebar from './RightSidebar';
 import Tweets from './Tweets';
+import TweetIcon from '../assets/icon/tweet.svg';
 
 ***REMOVED***
  *
@@ -17,6 +18,13 @@ function Home({auth}) {
     ***REMOVED***
         <div className="col-12 my-5">
           <Tweets/>
+    ***REMOVED***
+        <div className="col-2">
+          <div className="fixed-bottom text-right" style={{marginBottom: "5.5rem", marginRight: "1.5rem"}}>
+            <a href="#" className="btn btn-primary rounded-circle p-3">
+              <img src={TweetIcon} className="" width="25" alt="Tweet"/>
+            </a>
+      ***REMOVED***
     ***REMOVED***
         <div className="col-12 fixed-top text-white border-light border-bottom bg-black">
           <RightSidebar auth={auth}/>
