@@ -9,7 +9,7 @@ import Icon from './Icon';
  * @return {JSX.Element}
  * @constructor
 ***REMOVED***
-function RightSidebar({auth}) {
+function Header({auth}) {
 
   const {uid, photoURL} = auth.currentUser;
 
@@ -31,4 +31,4 @@ function RightSidebar({auth}) {
   ***REMOVED***
 }
 
-export default RightSidebar;
+export default Header;
