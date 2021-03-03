@@ -1,28 +1,41 @@
 ***REMOVED***
 
-import 'firebase/firestore';
-import 'firebase/auth';
-import 'firebase/analytics';
-***REMOVED***useAuthState} from 'react-firebase-hooks/auth';
-
+import Loading from './components/Loading';
 import Home from './components/Home';
 import SignIn from './components/SignIn';
 
-***REMOVED***
- *
- * @return {JSX.Element}
- * @constructor
-***REMOVED***
-function App({firebase}) {
+class App extends React.Component {
+  constructor(props) {
+    super(props***REMOVED***
+    this.state = {
+      loading: true,
+      name: '',
+    };
+  }
 
-  const auth = firebase.auth(***REMOVED***
-  const [user] = useAuthState(auth***REMOVED***
+  componentDidMount() {
+    this.props.firebase.auth().onAuthStateChanged(user => {
+        this.setState({
+          loading: false,
+          name: 'Stackoverflow',
+        }***REMOVED***
+    }***REMOVED***
+  }
 
-  return (
-      <div className="App">
-          {user ? <Home firebase={firebase} auth={auth}/> : <SignIn firebase={firebase} auth={auth}/>}
-  ***REMOVED***
-  ***REMOVED***
+  render() {
+
+    let auth = this.props.firebase.auth(***REMOVED***
+
+    if (this.state.loading) {
+      return <Loading/>;
+    } else {
+      if (auth.currentUser) {
+        return <Home firebase={this.props.firebase} auth={auth}/>;
+      } else {
+        return <SignIn firebase={this.props.firebase} auth={auth}/>
+      }
+    }
+  }
 }
 
 export default App;
