@@ -8,14 +8,60 @@ import Tooltip from 'react-bootstrap/Tooltip';
  * @return {*|JSX.Element}
  * @constructor
 ***REMOVED***
-function Icon({Image, Name, Placement, Classes}) {
+function Icon({Image, Name, Href, Placement, Classes}) {
+
+  const [show, setShow] = useState(false***REMOVED***
+  const target = useRef(null***REMOVED***
+
+  if (Href !== '#') {
+    return IconEnabled({Image, Name, Href, Placement, Classes}***REMOVED***
+  } else {
+    return IconDisabled({Image, Name, Href, Placement, Classes}***REMOVED***
+  }
+}
+
+***REMOVED***
+ *
+ * @param Image
+ * @param Name
+ * @param Href
+ * @param Placement
+ * @param Classes
+ * @returns {JSX.Element}
+ * @constructor
+***REMOVED***
+function IconEnabled({Image, Name, Href, Placement, Classes}) {
 
   const [show, setShow] = useState(false***REMOVED***
   const target = useRef(null***REMOVED***
 
   return (
     <>
-      <a href="#" ref={target} onClick={() => setShow(!show)}>
+      <a href={Href}>
+        <img src={Image} className={Classes} alt={Name}/>
+      </a>
+    </>
+  ***REMOVED***
+}
+
+***REMOVED***
+ *
+ * @param Image
+ * @param Name
+ * @param Href
+ * @param Placement
+ * @param Classes
+ * @returns {JSX.Element}
+ * @constructor
+***REMOVED***
+function IconDisabled({Image, Name, Href, Placement, Classes}) {
+
+  const [show, setShow] = useState(false***REMOVED***
+  const target = useRef(null***REMOVED***
+
+  return (
+    <>
+      <a href={Href} ref={target} onClick={() => setShow(!show)}>
         <img src={Image} className={Classes} alt={Name}/>
       </a>
       <Overlay target={target.current} show={show} placement={Placement}>
@@ -30,6 +76,7 @@ function Icon({Image, Name, Placement, Classes}) {
 }
 
 Icon.defaultProps = {
+  Href: '#',
   Placement: 'top',
   Classes: 'btn-icon',
 };
