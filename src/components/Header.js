@@ -1,7 +1,6 @@
 ***REMOVED***
 
 import StarIcon from '../assets/icon/star.svg';
-import HomeIcon from '../assets/icon/home.svg';
 import Icon from './Icon';
 
 ***REMOVED***
