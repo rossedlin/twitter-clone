@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+***REMOVED***
 
 import Icon from './Icon';
 import HomeIcon from '../assets/icon/home.svg';
@@ -8,12 +8,10 @@ import MessageIcon from '../assets/icon/message.svg';
 
 ***REMOVED***
  *
- * @param {firebase.auth.Auth} auth
- *
  * @return {*|JSX.Element}
  * @constructor
 ***REMOVED***
-function LeftSidebar(auth) {
+function Footer() {
   return (
     <div className="row">
       <div className="col-3">
@@ -35,4 +33,4 @@ function LeftSidebar(auth) {
   ***REMOVED***
 }
 
-export default LeftSidebar;
+export default Footer;
