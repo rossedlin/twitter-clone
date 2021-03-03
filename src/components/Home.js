@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import LeftSidebar from './LeftSidebar';
-import RightSidebar from './RightSidebar';
+import Footer from './Footer';
+import Header from './Header';
 import Tweet from './Tweet';
 import TweetIcon from '../assets/icon/tweet.svg';
 ***REMOVED***useCollectionData} from 'react-firebase-hooks/firestore';
