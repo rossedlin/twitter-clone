@@ -13,13 +13,6 @@ $theme-colors: (
 @import '../../../node_modules/bootstrap/scss/bootstrap';
 
 .btn-icon {
-  //@extend .img;
-  //@extend .img-fluid;
-  //@extend .btn;
-  //@extend .btn-info;
-  //@extend .rounded;
-  //@extend .rounded-circle;
-
   margin: 1.2rem !important;
 }
 
@@ -38,4 +31,8 @@ $theme-colors: (
 
 .tooltip-danger > .tooltip-inner {
   background-color: $danger;
+}
+
+.btn-primary {
+  border-radius: 9999px;
 }
