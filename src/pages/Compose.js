@@ -3,9 +3,9 @@ import React, {useRef, useState} from 'react';
 ***REMOVED***useAuthState} from 'react-firebase-hooks/auth';
 ***REMOVED***useCollectionData} from 'react-firebase-hooks/firestore';
 
-import Icon from './components/Icon';
-import BackIcon from './assets/icon/backArrow.svg';
-import Button from './components/Button';
+import Icon from '../components/Icon';
+import BackIcon from '../assets/icon/backArrow.svg';
+import Button from '../components/Button';
 
 ***REMOVED***
  *
