@@ -19,26 +19,9 @@ import App from './App';
 function Logout({firebase}) {
 
   const auth = firebase.auth(***REMOVED***
-  auth.signOut().then(
-    {}
-  ***REMOVED***
+  auth.signOut(***REMOVED*** //todo - ensure works correctly
 
-  // return (
-  //   <Router>
-  //     <Switch>
-  //       <Route path="/logout">
-  //         <Logout firebase={firebase}/>
-  //       </Route>
-  //       <Route path="/compose">
-  //         <Compose firebase={firebase}/>
-  //       </Route>
-  //       <Route path="/">
-  //         <App firebase={firebase}/>
-  //       </Route>
-  //     </Switch>
-  //   </Router>
-  //   <button onClick={() => auth.signOut()}>Sign out</button>
-  // ***REMOVED***
+  return <Redirect to='/login'/>;
 }
 
 export default Logout;
