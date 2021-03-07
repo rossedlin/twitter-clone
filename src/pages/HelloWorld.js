@@ -36,13 +36,6 @@ function HelloWorld({firebase}) {
           <h1>Hello World</h1>
           <p>{displayName}</p>
     ***REMOVED***
-        <div className="col-2">
-          <div className="fixed-bottom text-right" style={{marginBottom: '5.5rem', marginRight: '1.5rem'}}>
-            <a href="/compose" className="btn btn-primary rounded-circle p-3">
-              <img src={TweetIcon} className="" width="25" alt="Tweet"/>
-            </a>
-      ***REMOVED***
-    ***REMOVED***
         <div className="col-12 border-light border-top text-center bg-black">
           <Footer/>
     ***REMOVED***
