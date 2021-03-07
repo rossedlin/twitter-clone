@@ -1,8 +1,8 @@
 ***REMOVED***
 
-import Loading from './components/Loading';
-import Home from './components/Home';
-import SignIn from './components/SignIn';
+import Loading from '../components/Loading';
+import Home from '../components/Home';
+import Login from './Login';
 
 class App extends React.Component {
   constructor(props) {
@@ -32,7 +32,7 @@ class App extends React.Component {
       if (auth.currentUser) {
         return <Home firebase={this.props.firebase} auth={auth}/>;
       } else {
-        return <SignIn firebase={this.props.firebase} auth={auth}/>
+        return <Login firebase={this.props.firebase} auth={auth}/>
       }
     }
   }
