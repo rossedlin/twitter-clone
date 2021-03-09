@@ -27,7 +27,7 @@ function Home({firebase}) {
           <Tweets firebase={firebase}/>
         </div>
         <div className="col-12">
-          <div className="text-right" style={{marginBottom: '1.5rem', marginRight: '0.5rem'}}>
+          <div className="text-right" style={{marginTop: '1.5rem', marginBottom: '1.5rem', marginRight: '0.5rem'}}>
             <a href="/compose" className="btn btn-primary rounded-circle p-3">
               <img src={TweetIcon} className="" width="25" alt="Tweet"/>
             </a>
