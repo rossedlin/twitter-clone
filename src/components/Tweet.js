@@ -1,10 +1,10 @@
-***REMOVED***
+import React from 'react';
 
-***REMOVED***
+/**
  *
  * @return {JSX.Element}
  * @constructor
-***REMOVED***
+ */
 function Tweet({auth, message}) {
 
   const {username, displayName, text, uid, photoURL, createdAt} = message;
@@ -16,15 +16,15 @@ function Tweet({auth, message}) {
           <div className="col-3">
             <img src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'}
                  className="img img-fluid rounded-circle rounded p-2"/>
-      ***REMOVED***
+          </div>
           <div className="col-9 p-2 text-white">
             <h6>{displayName || "Unknown"} <span className="text-dark">@{username || 'unknown'} - </span></h6>
             <p>{text}</p>
-      ***REMOVED***
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Tweet;

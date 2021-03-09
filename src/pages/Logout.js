@@ -1,25 +1,25 @@
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
   Redirect,
-***REMOVED***
+} from 'react-router-dom';
 import firebase from 'firebase';
 import Compose from './Compose';
 import App from './App';
 
-***REMOVED***
+/**
  *
  * @param firebase
  * @returns {JSX.Element}
  * @constructor
-***REMOVED***
+ */
 function Logout({firebase}) {
 
-  const auth = firebase.auth(***REMOVED***
-  auth.signOut(***REMOVED*** //todo - ensure works correctly
+  const auth = firebase.auth();
+  auth.signOut(); //todo - ensure works correctly
 
   return <Redirect to='/login'/>;
 }

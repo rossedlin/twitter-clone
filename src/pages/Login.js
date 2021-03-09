@@ -1,31 +1,31 @@
 import TwitterIcon from '../assets/icon/twitter.svg';
-***REMOVED***useAuthState} from 'react-firebase-hooks/auth';
-***REMOVED***Redirect***REMOVED***
-***REMOVED***
+import {useAuthState} from 'react-firebase-hooks/auth';
+import {Redirect} from 'react-router-dom';
+import React from 'react';
 
-***REMOVED***
+/**
  *
  * @param firebase
  * @param auth
  * @return {JSX.Element}
  * @constructor
-***REMOVED***
+ */
 function Login({firebase}) {
 
-  let auth = firebase.auth(***REMOVED***
-  let [user] = useAuthState(auth***REMOVED***
+  let auth = firebase.auth();
+  let [user] = useAuthState(auth);
   let displayName;
 
-  ***REMOVED***
+  /**
    * Redirect if user
-  ***REMOVED***
+   */
   if (user) {
     return <Redirect to='/'  />
   }
 
   const signInWithGoogle = () => {
-    const provider = new firebase.auth.GoogleAuthProvider(***REMOVED***
-    auth.signInWithPopup(provider***REMOVED***
+    const provider = new firebase.auth.GoogleAuthProvider();
+    auth.signInWithPopup(provider);
   };
 
   return (
@@ -33,15 +33,15 @@ function Login({firebase}) {
       <div className="row">
         <div className="col-3">
           <img src={TwitterIcon} alt="Twitter Icon"/>
-    ***REMOVED***
+        </div>
         <div className="col-9">&nbsp;</div>
-  ***REMOVED***
+      </div>
       <div className="row">
         <div className="col-12 mt-5 text-light">
           <h1 style={{fontSize: '28px', fontWeight: 'bold'}}>
             Log in to Twitter
           </h1>
-    ***REMOVED***
+        </div>
         <div className="col-12 mt-5">
           <p className="text-info">
             Hey there, I'm a Twitter Clone.<br/>
@@ -65,15 +65,15 @@ function Login({firebase}) {
             you can check my <a href="https://github.com/rossedlin/twitter-clone"
                                 target="_blank">source code</a> here if you don't trust me.<br/>
           </p>
-    ***REMOVED***
+        </div>
         <div className="col-12 mt-5">
           <button className="btn btn-primary p-3" style={{width: '100%'}} onClick={signInWithGoogle}>
             Log in
           </button>
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Login;

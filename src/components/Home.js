@@ -3,14 +3,14 @@ import Footer from './Footer';
 import Header from './Header';
 import Tweet from './Tweet';
 import TweetIcon from '../assets/icon/tweet.svg';
-***REMOVED***useCollectionData} from 'react-firebase-hooks/firestore';
+import {useCollectionData} from 'react-firebase-hooks/firestore';
 import HelloWorld from './HelloWorld';
 import Loading from './Loading';
 import Login from '../pages/Login';
 
 class Home extends React.Component {
   constructor(props) {
-    super(props***REMOVED***
+    super(props);
     this.state = {
       loaded: false,
       messages: [],
@@ -18,29 +18,29 @@ class Home extends React.Component {
     };
   }
 
-  ***REMOVED***
+  /**
    *
-  ***REMOVED***
+   */
   componentDidMount() {
 
     setTimeout(function() {
       this.setState({
         loaded: true,
         name: 'Stackoverflow'
-      }***REMOVED***
-    }.bind(this), 2000***REMOVED***
+      });
+    }.bind(this), 2000);
 
     // if (this.loadMessages()) {
     //   this.state.loaded = true;
     // }
   }
 
-  ***REMOVED***
+  /**
    *
    * @returns {*}
-  ***REMOVED***
+   */
   render() {
-    let auth = this.props.firebase.auth(***REMOVED***
+    let auth = this.props.firebase.auth();
 
     if (this.state.loaded) {
       return <HelloWorld/>;
@@ -49,17 +49,17 @@ class Home extends React.Component {
     return <Loading/>;
   }
 
-  ***REMOVED***
+  /**
    *
    * @returns {*}
-  ***REMOVED***
+   */
   loadMessages() {
     let firebase        = this.props.firebase;
-    // let auth            = firebase.auth(***REMOVED***
-    let firestore       = firebase.firestore(***REMOVED***
-    let messageRef      = firestore.collection('messages'***REMOVED***
-    let query           = messageRef.orderBy('createdAt', 'desc').limit(25***REMOVED***
-    this.state.messages = useCollectionData(query, {idField: 'id'}***REMOVED***
+    // let auth            = firebase.auth();
+    let firestore       = firebase.firestore();
+    let messageRef      = firestore.collection('messages');
+    let query           = messageRef.orderBy('createdAt', 'desc').limit(25);
+    this.state.messages = useCollectionData(query, {idField: 'id'});
 
     return true;
   }

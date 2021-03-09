@@ -1,6 +1,6 @@
-***REMOVED***
-***REMOVED*** FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-***REMOVED*** faSpinner } from '@fortawesome/free-solid-svg-icons'
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 
 function Loading() {
   return (
@@ -8,10 +8,10 @@ function Loading() {
       <div className="row">
         <div className="col-12 text-white font-weight-bold text-center" style={{fontSize: 36, marginTop: "30%"}}>
           <FontAwesomeIcon icon={faSpinner} spin />
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Loading;

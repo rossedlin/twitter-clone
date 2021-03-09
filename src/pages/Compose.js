@@ -1,27 +1,27 @@
 import React, {useRef, useState} from 'react';
 
-***REMOVED***useAuthState} from 'react-firebase-hooks/auth';
-***REMOVED***useCollectionData} from 'react-firebase-hooks/firestore';
+import {useAuthState} from 'react-firebase-hooks/auth';
+import {useCollectionData} from 'react-firebase-hooks/firestore';
 
 import Icon from '../components/Icon';
 import BackIcon from '../assets/icon/backArrow.svg';
 import Button from '../components/Button';
 
-***REMOVED***
+/**
  *
  * @return {JSX.Element}
  * @constructor
-***REMOVED***
+ */
 function Compose({firebase}) {
 
-  const auth = firebase.auth(***REMOVED***
-  const firestore = firebase.firestore(***REMOVED***
+  const auth = firebase.auth();
+  const firestore = firebase.firestore();
 
-  const messageRef = firestore.collection('messages'***REMOVED***
-  const [formValue, setFormValue] = useState(''***REMOVED***
+  const messageRef = firestore.collection('messages');
+  const [formValue, setFormValue] = useState('');
 
   const sendMessage = async (e) => {
-    e.preventDefault(***REMOVED***
+    e.preventDefault();
 
     if (formValue.toString().length > 0) {
       const {uid, displayName, photoURL} = auth.currentUser;
@@ -32,10 +32,10 @@ function Compose({firebase}) {
         createdAt: firebase.firestore.FieldValue.serverTimestamp(),
         uid,
         photoURL,
-      }***REMOVED***
+      });
     }
 
-    setFormValue(''***REMOVED***
+    setFormValue('');
   };
 
   return (
@@ -45,12 +45,12 @@ function Compose({firebase}) {
           <div className="col-4">
             <div className="m-1">
               <Icon Href="/" Image={BackIcon} Name="Back"/>
-        ***REMOVED***
-      ***REMOVED***
+            </div>
+          </div>
           <div className="col-4">&nbsp;</div>
           <div className="col-4">
             <Button type={'submit'} Text="Tweet"/>
-      ***REMOVED***
+          </div>
           <div className="col-12 text-white font-weight-bold text-center" style={{fontSize: 36, marginTop: '3rem'}}>
             <div className="form-group">
               <label htmlFor="exampleFormControlTextarea1">Example textarea</label>
@@ -59,12 +59,12 @@ function Compose({firebase}) {
                         rows="5"
                         value={formValue}
                         onChange={(e) => setFormValue(e.target.value)}/>
-        ***REMOVED***
-      ***REMOVED***
-    ***REMOVED***
+            </div>
+          </div>
+        </div>
       </form>
-***REMOVED***
-  ***REMOVED***
+    </div>
+  );
 }
 
 export default Compose;

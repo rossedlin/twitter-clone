@@ -1,4 +1,4 @@
-***REMOVED***
+import React from 'react';
 import Icon from './Icon';
 
 function Link({Text, href, classes}) {
@@ -6,7 +6,7 @@ function Link({Text, href, classes}) {
     <a href={href} className={classes}>
       {Text}
     </a>
-  ***REMOVED***
+  );
 }
 
 Link.defaultProps = {

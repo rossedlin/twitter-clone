@@ -1,13 +1,13 @@
-***REMOVED***
+import React from 'react';
 
 import StarIcon from '../assets/icon/star.svg';
 import Icon from './Icon';
 
-***REMOVED***
+/**
  *
  * @return {JSX.Element}
  * @constructor
-***REMOVED***
+ */
 function Header({auth}) {
 
   const {uid, photoURL} = auth.currentUser;
@@ -19,15 +19,15 @@ function Header({auth}) {
           <img src={photoURL} className="img img-fluid rounded-circle"
                alt="Home Image"/>
         </a>
-  ***REMOVED***
+      </div>
       <div className="col-8">
         <h1 style={{fontSize: 18, fontWeight: 'bold'}}>Home</h1>
-  ***REMOVED***
+      </div>
       <div className="col-2">
         <Icon Image={StarIcon} Name="Top Tweets" Placement="left" Classes=""/>
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***
+      </div>
+    </div>
+  );
 }
 
 export default Header;
