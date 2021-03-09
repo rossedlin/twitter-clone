@@ -1,11 +1,8 @@
 import React, {useRef, useState} from 'react';
 
 import {useAuthState} from 'react-firebase-hooks/auth';
-import {useCollectionData} from 'react-firebase-hooks/firestore';
 
-import Icon from '../components/Icon';
 import BackIcon from '../assets/icon/backArrow.svg';
-import Button from '../components/Button';
 
 /**
  *
@@ -14,10 +11,11 @@ import Button from '../components/Button';
  */
 function Compose({firebase}) {
 
-  const auth = firebase.auth();
+  const auth      = firebase.auth();
   const firestore = firebase.firestore();
 
-  const messageRef = firestore.collection('messages');
+  // const {photoURL} = auth.currentUser;
+  const messageRef                = firestore.collection('messages');
   const [formValue, setFormValue] = useState('');
 
   const sendMessage = async (e) => {
@@ -41,25 +39,34 @@ function Compose({firebase}) {
   return (
     <div className="container">
       <form onSubmit={sendMessage}>
-        <div className="row">
+        <div className="row py-2 border-bottom">
           <div className="col-4">
             <div className="m-1">
-              <Icon Href="/" Image={BackIcon} Name="Back"/>
+              <a href="/">
+                <img src={BackIcon} height="40" alt="Back Icon"/>
+              </a>
             </div>
           </div>
           <div className="col-4">&nbsp;</div>
-          <div className="col-4">
-            <Button type={'submit'} Text="Tweet"/>
+          <div className="col-4 text-center">
+            <button type={'submit'} className="btn btn-primary m-1">Tweet</button>
           </div>
-          <div className="col-12 text-white font-weight-bold text-center" style={{fontSize: 36, marginTop: '3rem'}}>
-            <div className="form-group">
-              <label htmlFor="exampleFormControlTextarea1">Example textarea</label>
-              <textarea className="form-control"
+        </div>
+        <div className="row mt-3">
+          <div className="col-2">
+            <div className="m-1">
+              <a href="/">
+                <img src="" className="rounded" height="50" alt="Photo of you"/>
+              </a>
+            </div>
+          </div>
+          <div className="col-10 text-white font-weight-bold">
+              <textarea style={{width: '300px'}}
                         id="exampleFormControlTextarea1"
                         rows="5"
+                        placeholder="What's happening?"
                         value={formValue}
                         onChange={(e) => setFormValue(e.target.value)}/>
-            </div>
           </div>
         </div>
       </form>
