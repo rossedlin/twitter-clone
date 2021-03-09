@@ -18,7 +18,7 @@ function Home({firebase}) {
   }
 
   return (
-    <div className="container border">
+    <div className="container">
       <div className="row">
         <div className="col-12 text-white border-light border-bottom bg-black">
           <Header auth={auth}/>
