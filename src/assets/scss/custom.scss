@@ -1,7 +1,6 @@
-// Override default variables before the import
-//$body-bg: #000;
-
-// change the theme
+/**
+ * Color scheme
+ */
 $theme-colors: (
         "primary": #1da1f2,
         "info": #cdcdcd,
@@ -12,6 +11,29 @@ $theme-colors: (
 // Import Bootstrap and its default variables
 @import '../../../node_modules/bootstrap/scss/bootstrap';
 
+.container-iphone {
+  margin: 0 auto;
+  padding: 120px 140px 120px 140px;
+  width: 707px;
+  height: 1000px;
+  background-image: url('../img/iphone-6-gold.jpg');
+}
+
+textarea {
+  background-color: black;
+  color: #fff;
+
+  border: none;
+  overflow: auto;
+  outline: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  resize: none; /*remove the resize handle on the bottom right*/
+}
+
 .btn-icon {
   margin: 1.2rem !important;
 }
@@ -19,12 +41,15 @@ $theme-colors: (
 .tooltip-danger.bs-tooltip-top > .arrow:before {
   border-top-color: $danger;
 }
+
 .tooltip-danger.bs-tooltip-right > .arrow:before {
   border-right-color: $danger;
 }
+
 .tooltip-danger.bs-tooltip-bottom > .arrow:before {
   border-bottom-color: $danger;
 }
+
 .tooltip-danger.bs-tooltip-left > .arrow:before {
   border-left-color: $danger;
 }
