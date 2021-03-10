@@ -14,8 +14,9 @@ function Tweet({auth, message}) {
       <div className="col-12">
         <div className="row border-bottom border-dark">
           <div className="col-3">
-            <img src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'}
-                 className="img img-fluid rounded-circle rounded p-2"/>
+            <img src={photoURL || 'https://i.stack.imgur.com/wPh0S.jpg'}
+                 className="img img-fluid rounded-circle rounded p-2"
+                 alt="Profile Picture"/>
           </div>
           <div className="col-9 p-2 text-white">
             <h6>{displayName || "Unknown"} <span className="text-dark">@{username || 'unknown'} - </span></h6>
