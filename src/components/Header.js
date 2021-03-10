@@ -8,9 +8,9 @@ import Icon from './Icon';
  * @return {JSX.Element}
  * @constructor
  */
-function Header({auth}) {
+function Header({user}) {
 
-  const {uid, photoURL} = auth.currentUser;
+  const {uid, photoURL} = user;
 
   return (
     <div className="row py-2">
