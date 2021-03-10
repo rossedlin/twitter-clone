@@ -2,43 +2,7 @@ import React from 'react';
 
 import BackIcon from '../assets/icon/backArrow.svg';
 import Loading from '../components/Loading';
-import NameForm from '../components/NameForm';
 import {Redirect} from 'react-router-dom';
-
-/**
- *
- * @param firebase
- * @param user
- * @returns {JSX.Element}
- * @constructor
- */
-// function Test(firebase, user) {
-//
-//   const {uid, displayName, photoURL} = user;
-//   const firestore                    = firebase.firestore();
-//   const messageRef                   = firestore.collection('messages');
-//   // const [formValue, setFormValue] = useState('');
-//
-//   let formValue = '';
-//
-//   const sendMessage = async (e) => {
-//     e.preventDefault();
-//
-//     if (formValue.toString().length > 0) {
-//       const {uid, displayName, photoURL} = auth.currentUser;
-//
-//       await messageRef.add({
-//         displayName,
-//         text: formValue,
-//         createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-//         uid,
-//         photoURL,
-//       });
-//     }
-//
-//     // setFormValue('');
-//   };
-// }
 
 /**
  *
@@ -54,7 +18,7 @@ class Compose extends React.Component {
 
     /**
      *
-     * @type {JSX.Element}
+     * @type {firebase.User}
      */
     this.user    = null;
     this.loading = true;
@@ -145,22 +109,6 @@ class Compose extends React.Component {
     }
 
     return <Loading/>;
-  }
-
-  /**
-   *
-   * @returns {JSX.Element}
-   */
-  hello() {
-    return (
-      <div className="container">
-        <div className="row">
-          <div className="col-12 text-white font-weight-bold text-center" style={{fontSize: 36, marginTop: '50%'}}>
-            Hello from Compose
-          </div>
-        </div>
-      </div>
-    );
   }
 
   /**
