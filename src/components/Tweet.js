@@ -5,7 +5,7 @@ import React from 'react';
  * @return {JSX.Element}
  * @constructor
  */
-function Tweet({auth, message}) {
+function Tweet({message}) {
 
   const {username, displayName, text, uid, photoURL, createdAt} = message;
 
