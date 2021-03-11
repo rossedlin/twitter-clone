@@ -30,17 +30,6 @@ body {
   }
 }
 
-// Medium devices (tablets, 768px and up)
-//@media (min-width: 768px) {
-//  .container-iphone {
-//    margin: 0 auto;
-//    padding: 120px 140px 120px 140px;
-//    width: 707px;
-//    height: 1000px;
-//    background-image: url('../img/iphone-6-gold.jpg');
-//  }
-//}
-
 textarea {
   background-color: black;
   color: #fff;
@@ -53,7 +42,7 @@ textarea {
   -moz-box-shadow: none;
   box-shadow: none;
 
-  resize: none; /*remove the resize handle on the bottom right*/
+  resize: none;
 }
 
 .btn-icon {
