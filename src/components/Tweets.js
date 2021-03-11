@@ -37,6 +37,7 @@ class Tweets extends React.Component {
           displayName: doc.data().displayName,
           photoURL: doc.data().photoURL,
           text: doc.data().text,
+          createdAt: doc.data().createdAt,
         };
       });
 

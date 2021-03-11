@@ -7,7 +7,7 @@ import React from 'react';
  */
 function Tweet({message}) {
 
-  const {username, displayName, text, photoURL} = message;
+  const {username, displayName, text, photoURL, createdAt} = message;
 
   return (
     <div className="row">
@@ -19,7 +19,7 @@ function Tweet({message}) {
                  alt="Profile Picture"/>
           </div>
           <div className="col-9 p-2 text-white">
-            <h6>{displayName || "Unknown"} <span className="text-dark">@{username || 'unknown'} - </span></h6>
+            <h6>{displayName || 'Unknown'} <span className="text-dark">@{username || 'unknown'} - {createdAt.toDate().toLocaleDateString()}</span></h6>
             <p>{text}</p>
           </div>
         </div>
