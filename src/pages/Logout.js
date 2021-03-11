@@ -1,14 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
   Redirect,
 } from 'react-router-dom';
-import firebase from 'firebase';
-import Compose from './Compose';
-import App from './App';
 
 /**
  *

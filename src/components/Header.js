@@ -10,7 +10,7 @@ import Icon from './Icon';
  */
 function Header({user}) {
 
-  const {uid, photoURL} = user;
+  const {photoURL} = user;
 
   return (
     <div className="row py-2">

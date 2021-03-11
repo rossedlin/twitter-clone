@@ -14,7 +14,6 @@ function Login({firebase}) {
 
   let auth = firebase.auth();
   let [user] = useAuthState(auth);
-  let displayName;
 
   /**
    * Redirect if user

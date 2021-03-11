@@ -5,8 +5,15 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import firebase from 'firebase/app';
 import reportWebVitals from './reportWebVitals';
+
+/**
+ * Firebase
+ */
+import firebase from 'firebase/app';
+require('firebase/auth');
+require('firebase/firestore');
+
 
 /**
  * Styles

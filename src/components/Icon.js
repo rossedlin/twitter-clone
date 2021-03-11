@@ -9,10 +9,6 @@ import Tooltip from 'react-bootstrap/Tooltip';
  * @constructor
  */
 function Icon({Image, Name, Href, Placement, Classes}) {
-
-  const [show, setShow] = useState(false);
-  const target = useRef(null);
-
   if (Href !== '#') {
     return IconEnabled({Image, Name, Href, Placement, Classes});
   } else {
@@ -31,10 +27,6 @@ function Icon({Image, Name, Href, Placement, Classes}) {
  * @constructor
  */
 function IconEnabled({Image, Name, Href, Placement, Classes}) {
-
-  const [show, setShow] = useState(false);
-  const target = useRef(null);
-
   return (
     <>
       <a href={Href}>

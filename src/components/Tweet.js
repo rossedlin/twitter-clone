@@ -7,7 +7,7 @@ import React from 'react';
  */
 function Tweet({message}) {
 
-  const {username, displayName, text, uid, photoURL, createdAt} = message;
+  const {username, displayName, text, photoURL} = message;
 
   return (
     <div className="row">
