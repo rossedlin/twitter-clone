@@ -38,11 +38,7 @@ class Tweets extends React.Component {
           photoURL: doc.data().photoURL,
           text: doc.data().text,
         };
-
-        // return 1;
       });
-
-      console.log(messages);
 
       this.loading = false;
       this.setState({messages});
