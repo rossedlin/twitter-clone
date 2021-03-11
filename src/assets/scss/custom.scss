@@ -11,13 +11,35 @@ $theme-colors: (
 // Import Bootstrap and its default variables
 @import '../../../node_modules/bootstrap/scss/bootstrap';
 
-.container-iphone {
-  margin: 0 auto;
-  padding: 120px 140px 120px 140px;
-  width: 707px;
-  height: 1000px;
-  background-image: url('../img/iphone-6-gold.jpg');
+body {
+  background-color: black;
 }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  body {
+    background-color: white;
+  }
+
+  .container-iphone {
+    margin: 0 auto;
+    padding: 120px 140px 120px 140px;
+    width: 707px;
+    height: 1000px;
+    background-image: url('../img/iphone-6-gold.jpg');
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+//@media (min-width: 768px) {
+//  .container-iphone {
+//    margin: 0 auto;
+//    padding: 120px 140px 120px 140px;
+//    width: 707px;
+//    height: 1000px;
+//    background-image: url('../img/iphone-6-gold.jpg');
+//  }
+//}
 
 textarea {
   background-color: black;
