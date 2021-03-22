@@ -60,6 +60,37 @@ body {
 }
 
 /**
+ * Login
+ */
+.login {
+  @extend .px-4;
+  @extend .py-4;
+}
+
+.login-content > div {
+  @extend .mt-5;
+}
+
+.login-content h1 {
+  @extend .text-light;
+
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.login-content p {
+  @extend .text-info;
+}
+
+.login button {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .p-3;
+
+  width: 100%;
+}
+
+/**
  * Compose
  */
 textarea {
