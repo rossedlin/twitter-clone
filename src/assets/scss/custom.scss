@@ -30,6 +30,38 @@ body {
   }
 }
 
+/**
+ * Header
+ */
+.header {
+  @extend .py-2;
+}
+
+.header img {
+  @extend .img-fluid;
+  @extend .rounded-circle;
+}
+
+.header h1 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/**
+ * Loading
+ */
+.loading > div > div {
+  @extend .text-white;
+  @extend .font-weight-bold;
+  @extend .text-center;
+
+  font-size: 36px;
+  margin-top: 30%;
+}
+
+/**
+ * Compose
+ */
 textarea {
   background-color: black;
   color: #fff;
