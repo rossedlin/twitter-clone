@@ -8,13 +8,6 @@ import {
 import reportWebVitals from './reportWebVitals';
 
 /**
- * Firebase
- */
-import firebase from 'firebase/app';
-require('firebase/auth');
-require('firebase/firestore');
-
-/**
  * Styles
  */
 import './assets/scss/custom.scss';
@@ -26,6 +19,13 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Logout from './pages/Logout';
 import Compose from './pages/Compose';
+
+/**
+ * Firebase
+ */
+import firebase from 'firebase/app';
+require('firebase/auth');
+require('firebase/firestore');
 
 /**
  * Firebase
