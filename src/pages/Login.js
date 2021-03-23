@@ -12,14 +12,14 @@ import React from 'react';
  */
 function Login({firebase}) {
 
-  let auth = firebase.auth();
+  let auth   = firebase.auth();
   let [user] = useAuthState(auth);
 
   /**
    * Redirect if user
    */
   if (user) {
-    return <Redirect to='/'  />
+    return <Redirect to='/'/>;
   }
 
   const signInWithGoogle = () => {
