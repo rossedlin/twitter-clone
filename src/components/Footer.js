@@ -13,7 +13,7 @@ import MessageIcon from '../assets/icon/message.svg';
  */
 function Footer() {
   return (
-    <div className="row">
+    <div className="row footer">
       <div className="col-3">
         <Icon Image={HomeIcon} Name="Home"/>
       </div>

@@ -61,22 +61,22 @@ class Home extends React.Component {
    */
   view() {
     return (
-      <div className="container">
+      <div className="container home">
         <div className="row">
-          <div className="col-12 text-white border-light border-bottom bg-black">
+          <div className="col-12">
             <Header user={this.user}/>
           </div>
           <div className="col-12">
             <Tweets firebase={this.props.firebase}/>
           </div>
           <div className="col-12">
-            <div className="text-right" style={{marginTop: '1.5rem', marginBottom: '1.5rem', marginRight: '0.5rem'}}>
-              <a href="/compose" className="btn btn-primary rounded-circle p-3">
-                <img src={TweetIcon} className="" width="25" alt="Tweet"/>
+            <div className="btn-tweet">
+              <a href="/compose">
+                <img src={TweetIcon} width="25" alt="Button Tweet"/>
               </a>
             </div>
           </div>
-          <div className="col-12 border-light border-top text-center bg-black">
+          <div className="col-12">
             <Footer/>
           </div>
         </div>

@@ -91,6 +91,38 @@ body {
 }
 
 /**
+ * Home
+ */
+.home .header {
+  @extend .text-white;
+  @extend .border-light;
+  @extend .border-bottom;
+  @extend .bg-black;
+}
+
+.home .btn-tweet {
+  @extend .text-right;
+
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.home .btn-tweet > a {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .rounded-circle;
+  @extend .p-3;
+}
+
+.home .footer {
+  @extend .text-center;
+  @extend .border-light;
+  @extend .border-top;
+  @extend .bg-black;
+}
+
+/**
  * Compose
  */
 textarea {
