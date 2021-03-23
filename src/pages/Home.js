@@ -20,7 +20,7 @@ class Home extends React.Component {
      *
      * @type {firebase.User}
      */
-    this.user    = null;
+    this.user = null;
     this.loading = true;
   }
 
