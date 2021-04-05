@@ -1,7 +1,6 @@
 import React from 'react';
 
 import StarIcon from '../assets/icon/star.svg';
-import Icon from './Icon';
 
 /**
  *
@@ -24,7 +23,7 @@ function Header({user}) {
         <h1>Home</h1>
       </div>
       <div className="col-2">
-        <Icon Image={StarIcon} Name="Top Tweets" Placement="left" Classes=""/>
+        <img src={StarIcon} className="btn-icon" alt="Star Icon"/>
       </div>
     </div>
   );
