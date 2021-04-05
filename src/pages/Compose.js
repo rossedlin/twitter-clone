@@ -50,7 +50,7 @@ class Compose extends React.Component {
       messageRef.add({
         displayName,
         text: this.state.value,
-        createdAt: firestore.FieldValue.serverTimestamp(),
+        createdAt: this.props.firebase.firestore.FieldValue.serverTimestamp(),
         uid,
         photoURL,
       });
