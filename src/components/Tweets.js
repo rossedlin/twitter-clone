@@ -11,10 +11,6 @@ class Tweets extends React.Component {
   constructor(props) {
     super(props);
 
-    /**
-     *
-     * @type {boolean}
-     */
     this.loading = true;
   }
 
@@ -33,7 +29,6 @@ class Tweets extends React.Component {
         messages[i++] = {
           id: doc.id,
           uid: doc.data().uid,
-          username: doc.data().username,
           displayName: doc.data().displayName,
           photoURL: doc.data().photoURL,
           text: doc.data().text,
