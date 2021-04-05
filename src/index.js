@@ -24,12 +24,10 @@ import Compose from './pages/Compose';
  * Firebase
  */
 import firebase from 'firebase/app';
+
 require('firebase/auth');
 require('firebase/firestore');
 
-/**
- * Firebase
- */
 firebase.initializeApp(require('./.env.json'));
 
 /**
