@@ -1,8 +1,8 @@
 import React from 'react';
+import {Redirect} from 'react-router-dom';
 
 import BackIcon from '../assets/icon/backArrow.svg';
 import Loading from '../components/Loading';
-import {Redirect} from 'react-router-dom';
 
 /**
  *
@@ -76,16 +76,12 @@ class Compose extends React.Component {
     if (this.state.value.toString().length > 0) {
       const {uid, displayName, photoURL} = this.user;
 
-      console.log('Tweeting: ' + this.state.value);
-
       messageRef.add({
         displayName,
         text: this.state.value,
-        createdAt: this.props.firebase.firestore.FieldValue.serverTimestamp(),
+        createdAt: firestore.FieldValue.serverTimestamp(),
         uid,
         photoURL,
-      }).then(() => {
-        console.log('Sent!');
       });
     }
 
@@ -139,11 +135,7 @@ class Compose extends React.Component {
               <img src={photoURL} className="rounded" height="50" alt="Photo of you"/>
             </div>
             <div className="compose-message">
-              <textarea id="exampleFormControlTextarea1"
-                        rows="5"
-                        placeholder="What's happening?"
-                        value={this.state.value}
-                        onChange={this.handleChange}/>
+              <textarea rows="5" placeholder="What's happening?" value={this.state.value} onChange={this.handleChange}/>
             </div>
           </div>
         </form>
