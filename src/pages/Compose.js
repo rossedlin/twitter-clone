@@ -112,7 +112,7 @@ class Compose extends React.Component {
   }
 
   /**
-   * Old View
+   * View
    */
   view() {
 
