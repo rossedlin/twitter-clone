@@ -4,43 +4,22 @@ import {Redirect} from 'react-router-dom';
 import BackIcon from '../assets/icon/backArrow.svg';
 import Loading from '../components/Loading';
 
-/**
- *
- */
 class Compose extends React.Component {
 
-  /**
-   *
-   * @param props
-   */
   constructor(props) {
     super(props);
 
-    /**
-     *
-     * @type {firebase.User}
-     */
-    this.user = null;
+    this.user    = null;
     this.loading = true;
 
-    /**
-     *
-     * @type {{loading: boolean, user: null, value: string}}
-     */
     this.state = {
       value: '',
     };
 
-    /**
-     *
-     */
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  /**
-   *
-   */
   componentDidMount() {
     this.props.firebase.auth().onAuthStateChanged(user => {
 
@@ -53,20 +32,12 @@ class Compose extends React.Component {
     });
   }
 
-  /**
-   *
-   * @param event
-   */
   handleChange(event) {
     this.setState({
       value: event.target.value,
     });
   }
 
-  /**
-   *
-   * @param event
-   */
   handleSubmit(event) {
     event.preventDefault();
 
@@ -90,10 +61,6 @@ class Compose extends React.Component {
     });
   }
 
-  /**
-   *
-   * @returns {JSX.Element}
-   */
   render() {
 
     if (!this.loading) {
@@ -107,9 +74,6 @@ class Compose extends React.Component {
     return <Loading/>;
   }
 
-  /**
-   * View
-   */
   view() {
 
     const {photoURL} = this.user;
