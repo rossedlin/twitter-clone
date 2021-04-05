@@ -186,6 +186,40 @@ body {
   }
 }
 
+.tweet {
+  @extend .row;
+
+  > div {
+    @extend .col-12;
+
+    > div {
+      @extend .row;
+      @extend .border-bottom;
+      @extend .border-dark;
+
+      > .tweet-image {
+        @extend .col-3;
+
+        > img {
+          @extend .img-fluid;
+          @extend .rounded-circle;
+          @extend .p-2;
+        }
+      }
+
+      > .tweet-text {
+        @extend .col-9;
+        @extend .p-2;
+        @extend .text-white;
+
+        > h6 > span {
+          @extend .text-dark;
+        }
+      }
+    }
+  }
+}
+
 /**
  *
  */
