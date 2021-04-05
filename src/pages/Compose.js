@@ -20,7 +20,7 @@ class Compose extends React.Component {
      *
      * @type {firebase.User}
      */
-    this.user    = null;
+    this.user = null;
     this.loading = true;
 
     /**
@@ -119,30 +119,27 @@ class Compose extends React.Component {
     const {photoURL} = this.user;
 
     return (
-      <div className="container">
+      <div className="compose">
         <form onSubmit={this.handleSubmit}>
-          <div className="row py-2 border-bottom">
-            <div className="col-4">
-              <div className="m-1">
-                <a href="/">
-                  <img src={BackIcon} height="40" alt="Back Icon"/>
-                </a>
-              </div>
+
+          <div className="compose-header">
+            <div className="compose-back">
+              <a href="/">
+                <img src={BackIcon} height="40" alt="Back Icon"/>
+              </a>
             </div>
             <div className="col-4">&nbsp;</div>
-            <div className="col-4 text-center">
-              <button type={'submit'} className="btn btn-primary m-1">Tweet</button>
+            <div className="compose-tweet">
+              <button type={'submit'}>Tweet</button>
             </div>
           </div>
-          <div className="row mt-3">
-            <div className="col-2">
-              <div className="m-1">
-                <img src={photoURL} className="rounded" height="50" alt="Photo of you"/>
-              </div>
+
+          <div className="compose-body">
+            <div className="compose-photo">
+              <img src={photoURL} className="rounded" height="50" alt="Photo of you"/>
             </div>
-            <div className="col-10 text-white font-weight-bold">
-              <textarea style={{width: '300px'}}
-                        id="exampleFormControlTextarea1"
+            <div className="compose-message">
+              <textarea id="exampleFormControlTextarea1"
                         rows="5"
                         placeholder="What's happening?"
                         value={this.state.value}

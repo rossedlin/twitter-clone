@@ -125,21 +125,70 @@ body {
 /**
  * Compose
  */
-textarea {
-  background-color: black;
-  color: #fff;
+.compose {
+  @extend .container;
 
-  border: none;
-  overflow: auto;
-  outline: none;
+  .compose-header {
+    @extend .row;
+    @extend .py-2;
+    @extend .border-bottom;
 
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+    .compose-back {
+      @extend .col-4;
+      //@extend .m-1;
 
-  resize: none;
+      > a {
+        @extend .m-1;
+      }
+    }
+
+    .compose-tweet {
+      @extend .col-4;
+      @extend .text-center;
+
+      > button {
+        @extend .btn;
+        @extend .btn-primary;
+        @extend .m-1;
+      }
+    }
+  }
+
+  .compose-body {
+    @extend .row;
+    @extend .mt-3;
+
+    .compose-photo {
+      @extend .col-2;
+    }
+
+    .compose-message {
+      @extend .col-10;
+      @extend .text-white;
+      @extend .font-weight-bold;
+
+      > textarea {
+        width: 300px;
+        background-color: black;
+        color: #fff;
+
+        border: none;
+        overflow: auto;
+        outline: none;
+
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+
+        resize: none;
+      }
+    }
+  }
 }
 
+/**
+ *
+ */
 .btn-icon {
   margin: 1.2rem !important;
 }
