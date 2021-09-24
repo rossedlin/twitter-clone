@@ -24,7 +24,6 @@
     "start": "BROWSER=none react-scripts start",
     "lint": "./node_modules/.bin/eslint src",
     "build": "react-scripts build",
-    "deploy": "react-scripts build; firebase deploy;",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

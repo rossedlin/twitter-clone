@@ -31,7 +31,16 @@ import Compose from './pages/Compose';
 /**
  * Firebase
  */
-firebase.initializeApp(require('./.env.json'));
+firebase.initializeApp({
+  apiKey:            "AIzaSyCq1MQ0DTLOK6heIgzLrJ5FnVSKBUCyUc4",
+  authDomain:        "twitter-clone-c935e.firebaseapp.com",
+  databaseURL:       "https://twitter-clone-c935e-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId:         "twitter-clone-c935e",
+  storageBucket:     "twitter-clone-c935e.appspot.com",
+  messagingSenderId: "254207818709",
+  appId:             "1:254207818709:web:0e5c3aae7d6b5aa3915b5c",
+  measurementId:     "G-MV86CVLGXG"
+});
 
 /**
  * Render
@@ -41,6 +50,10 @@ ReactDOM.render(
     <div className="container-iphone">
       <Router>
         <Switch>
+          <Route path='/assets' component={() => {
+            window.location.href = 'https://firebasestorage.googleapis.com/v0/b/twitter-clone-c935e.appspot.com/o/twitter-app-assets.zip?alt=media&token=30259c1d-76e8-4140-a3f2-d75170807d8e';
+            return null;
+          }}/>
           <Route path="/login">
             <Login firebase={firebase}/>
           </Route>
