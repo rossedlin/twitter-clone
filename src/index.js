@@ -50,10 +50,6 @@ ReactDOM.render(
     <div className="container-iphone">
       <Router>
         <Switch>
-          <Route path='/assets' component={() => {
-            window.location.href = 'https://firebasestorage.googleapis.com/v0/b/twitter-clone-c935e.appspot.com/o/twitter-app-assets.zip?alt=media&token=30259c1d-76e8-4140-a3f2-d75170807d8e';
-            return null;
-          }}/>
           <Route path="/login">
             <Login firebase={firebase}/>
           </Route>
