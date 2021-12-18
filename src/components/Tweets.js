@@ -22,7 +22,7 @@ class Tweets extends React.Component {
     let firestore = this.props.firebase.firestore();
     let messages  = [];
 
-    firestore.collection('messages').orderBy('createdAt', 'desc').limit(25).get().then((querySnapshot) => {
+    firestore.collection('messages').orderBy('createdAt', 'desc').limit(6).get().then((querySnapshot) => {
 
       let i = 0;
       querySnapshot.forEach((doc) => {
