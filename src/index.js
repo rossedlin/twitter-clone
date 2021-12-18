@@ -28,14 +28,6 @@ import Login from './pages/Login';
 import Logout from './pages/Logout';
 import Compose from './pages/Compose';
 
-/**
- * Firebase
- */
-import firebase from 'firebase/app';
-
-require('firebase/auth');
-require('firebase/firestore');
-
 firebase.initializeApp(require('./.env.json'));
 
 /**
