@@ -7,6 +7,7 @@ pipelines:
         deployment: production
         script:
           - yarn install
+          - yarn build
 #    - step:
 #        name: Deploy to Firebase
 #        deployment: production
