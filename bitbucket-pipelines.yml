@@ -2,12 +2,19 @@ image: node:14.17.6
 
 pipelines:
   default:
+
+    - step:
+        name: Build
+        script:
+          - yarn install
+          - yarn build
+        artifacts:
+          - build/**
+
     - step:
         name: Deploy to Firebase
         deployment: production
         script:
-          - yarn install
-          - yarn build
           - pipe: atlassian/firebase-deploy:0.2.1
             variables:
               FIREBASE_TOKEN: $FIREBASE_TOKEN
