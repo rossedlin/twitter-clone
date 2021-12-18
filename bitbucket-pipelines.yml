@@ -1,4 +1,4 @@
-image: node
+image: node:14.17.6
 
 pipelines:
   default:
@@ -6,9 +6,7 @@ pipelines:
         name: Build React
         deployment: production
         script:
-          - echo "Hello"
           - yarn install
-          - yarn build
 #    - step:
 #        name: Deploy to Firebase
 #        deployment: production
