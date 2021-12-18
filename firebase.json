@@ -1,17 +1,24 @@
 {
-  "database": {
+  "database":  {
     "rules": "database.rules.json"
   },
-  "hosting": {
-    "public": "build",
-    "ignore": [
+  "hosting":   {
+    "public":    "build",
+    "ignore":    [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [
+    "redirects": [
       {
-        "source": "**",
+        "source":      "/assets",
+        "destination": "https://firebasestorage.googleapis.com/v0/b/twitter-clone-c935e.appspot.com/o/twitter-app-assets.zip?alt=media&token=30259c1d-76e8-4140-a3f2-d75170807d8e",
+        "type":        301
+      }
+    ],
+    "rewrites":  [
+      {
+        "source":      "**",
         "destination": "/index.html"
       }
     ]
@@ -23,7 +30,7 @@
     }
   },
   "firestore": {
-    "rules": "firestore.rules",
+    "rules":   "firestore.rules",
     "indexes": "firestore.indexes.json"
   }
 }

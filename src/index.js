@@ -8,6 +8,14 @@ import {
 import reportWebVitals from './reportWebVitals';
 
 /**
+ * Firebase
+ */
+import firebase from 'firebase/app';
+require('firebase/auth');
+require('firebase/firestore');
+
+
+/**
  * Styles
  */
 import './assets/scss/custom.scss';
